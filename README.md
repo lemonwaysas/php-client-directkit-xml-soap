@@ -79,3 +79,13 @@ ini_set("soap.wsdl_cache_ttl", 10);
 [SoapClient]: https://github.com/lemonwaysas/php-client-directkit-xml-soap
 [SoapClient SDK]: https://github.com/lemonwaysas/php-client-directkit-xml-soap-sdk
 [LemonWay SDK]: https://github.com/lemonwaysas/php-client-directkit-xml
+
+# Common scenario
+- Register a Payer Wallet (RegisterWallet)
+- Register a Receiver Wallet (RegisterWallet)
+- Update email for Receiver Wallet (UpdateWalletDetails)
+- Register a credit card for Payer Wallet (RegisterCard)
+- Pay 100.00€ to Payer Wallet with the registered card (MoneyInWithCardId)
+- Send 10.00€ from Payer Wallet to Receiver Wallet (SendPayment)
+- Register an IBAN for Receiver Wallet (RegisterIBAN)
+- Take 10.00€ from Receiver Wallet to the registered IBAN (MoneyOut)
