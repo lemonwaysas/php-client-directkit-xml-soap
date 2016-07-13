@@ -1,5 +1,5 @@
 <?php
-define('DIRECTKIT_WS', 'https://ws.lemonway.fr/mb/YOUR_COMPANY/dev/directkitxml/service.asmx');
+define('DIRECTKIT_WS', 'https://sandbox-api.lemonway.fr/mb/YOUR_COMPANY/dev/directkitxml/Service.asmx');
 define('LOGIN', 'society');
 define('PASSWORD', '123456');
 define('VERSION', '1.8');
