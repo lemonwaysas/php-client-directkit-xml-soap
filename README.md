@@ -57,7 +57,9 @@ soap.wsdl_cache_dir="/tmp"
 soap.wsdl_cache_ttl=86400
 ```
 
-**You can force refresh the cache by deleting every `wsdl-*` files in the folder `wsdl_cache_dir`**. No need to restart your PHP Server
+You must to restart PHP server (or Apache) each changes in `php.ini`.
+
+But **You can also force refresh the cache by deleting every `wsdl-*` files in the folder `wsdl_cache_dir`**. No need to restart your PHP Server.
 
 # Manipulate the SoapClient WSDL cache in code
 
