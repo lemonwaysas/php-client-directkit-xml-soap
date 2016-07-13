@@ -15,7 +15,8 @@ $response = $client->GetWalletDetails(array(
 
 
 //print the response
-echo "<pre>".json_encode($response, JSON_PRETTY_PRINT)."</pre";
+echo "---------- Wallet 8888: ----------";
+echo "<pre>".json_encode($response, JSON_PRETTY_PRINT)."</pre>";
 /*
  {
     "GetWalletDetailsResult": {
@@ -60,6 +61,7 @@ $response_error = $client->GetWalletDetails(array(
         "wallet" => "NotExist"
     ));
 //print the response
+echo "---------- Wallet NotExist: ----------";
 echo "<pre>".json_encode($response_error, JSON_PRETTY_PRINT)."</pre>";
 /*
 {
