@@ -80,6 +80,9 @@ ini_set("soap.wsdl_cache_ttl", 10);
 [SoapClient SDK]: https://github.com/lemonwaysas/php-client-directkit-xml-soap-sdk
 [LemonWay SDK]: https://github.com/lemonwaysas/php-client-directkit-xml
 
+# PHP Fatal error:  SOAP-ERROR: Parsing WSDL: Couldn't find <definitions> in...
+If you has this error, probably your server's IP address has not been whitelisted, please contact operations@lemonway.com
+
 # Common scenario
 - Register a Payer Wallet (RegisterWallet)
 - Register a Receiver Wallet (RegisterWallet)
