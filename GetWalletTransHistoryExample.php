@@ -6,7 +6,7 @@ $client = new SoapClient(DIRECTKIT_WS."?wsdl", array("trace"=>true, "exception"=
 $response = $client->GetWalletTransHistory(array(
         "wlLogin" => LOGIN,
         "wlPass" => PASSWORD,
-        "language" => "fr",
+        "language" => LANGUAGE,
         "version" => VERSION,
         "walletIp" => getUserIP(),
         "walletUa" => UA,

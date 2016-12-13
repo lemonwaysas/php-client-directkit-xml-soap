@@ -1,8 +1,9 @@
 <?php
-define('DIRECTKIT_WS', 'https://sandbox-api.lemonway.fr/mb/YOUR_COMPANY/dev/directkitxml/Service.asmx');
+define('DIRECTKIT_WS', 'https://sandbox-api.lemonway.fr/mb/demo/dev/directkitxml/Service.asmx');
 define('LOGIN', 'society');
 define('PASSWORD', '123456');
 define('VERSION', '1.8');
+define('LANGUAGE', 'en');
 define('UA', isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : 'ua');
 
 /**

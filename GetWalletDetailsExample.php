@@ -6,7 +6,7 @@ $client = new SoapClient(DIRECTKIT_WS."?wsdl", array("trace"=>true, "exception"=
 $response = $client->GetWalletDetails(array(
         "wlLogin" => LOGIN,
         "wlPass" => PASSWORD,
-        "language" => "fr",
+        "language" => LANGUAGE,
         "version" => VERSION,
         "walletIp" => getUserIP(),
         "walletUa" => UA,
@@ -54,7 +54,7 @@ echo "<pre>".json_encode($response, JSON_PRETTY_PRINT)."</pre>";
 $response_error = $client->GetWalletDetails(array(
         "wlLogin" => LOGIN,
         "wlPass" => PASSWORD,
-        "language" => "fr",
+        "language" => LANGUAGE,
         "version" => VERSION,
         "walletIp" => getUserIP(),
         "walletUa" => UA,
