@@ -6,6 +6,8 @@ There are at least 3 ways to consume the LemonWay API in PHP
 
 This example demonstrates the first method.
 
+It is tested with PHP 5.4.31 and PHP 7.
+
 # Required extensions
 
 In order to use [`SoapClient`], you have to activate the following extensions in `php.ini`
