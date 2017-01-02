@@ -1,78 +1,35 @@
 <?php
 require_once "./includes.php";
+try {
+    $client = new SoapClient(DIRECTKIT_WSDL, array("trace"=>false, "exceptions"=>true));
+    $response = $client->GetWalletDetails(array(
+            "wlLogin" => LOGIN,
+            "wlPass" => PASSWORD,
+            "language" => LANGUAGE,
+            "version" => VERSION,
+            "walletIp" => getUserIP(),
+            "walletUa" => UA,
+            "wallet" => "8888"
+        ));
 
-$client = new SoapClient(DIRECTKIT_WS."?wsdl", array("trace"=>true, "exception"=>0));
+    echo "---------- Wallet 8888: ----------";
+    echo "<pre>".json_encode($response, JSON_PRETTY_PRINT)."</pre>";
 
-$response = $client->GetWalletDetails(array(
-        "wlLogin" => LOGIN,
-        "wlPass" => PASSWORD,
-        "language" => LANGUAGE,
-        "version" => VERSION,
-        "walletIp" => getUserIP(),
-        "walletUa" => UA,
-        "wallet" => "8888"
-    ));
+    $response_error = $client->GetWalletDetails(array(
+            "wlLogin" => LOGIN,
+            "wlPass" => PASSWORD,
+            "language" => LANGUAGE,
+            "version" => VERSION,
+            "walletIp" => getUserIP(),
+            "walletUa" => UA,
+            "wallet" => "NotExist"
+        ));
 
-
-//print the response
-echo "---------- Wallet 8888: ----------";
-echo "<pre>".json_encode($response, JSON_PRETTY_PRINT)."</pre>";
-/*
- {
-    "GetWalletDetailsResult": {
-        "WALLET": {
-            "ID": "8888",
-            "BAL": "622.00",
-            "NAME": "Barack OBAMA",
-            "EMAIL": "hduong8888@lemonway.fr",
-            "DOCS": {},
-            "IBANS": {},
-            "STATUS": "6",
-            "BLOCKED": "0",
-            "SDDMANDATES": {},
-            "LWID": "45",
-            "CARDS": {
-                "CARD": {
-                    "ID": "16",
-                    "EXTRA": {
-                        "IS3DS": "0",
-                        "CTRY": "",
-                        "AUTH": "585314",
-                        "NUM": "501767XXXXXX6700",
-                        "EXP": "05\/2019",
-                        "TYP": "CB"
-                    }
-                }
-            }
-        }
-    }
+    echo "---------- Wallet NotExist: ----------";
+    echo "<pre>".json_encode($response_error, JSON_PRETTY_PRINT)."</pre>";
 }
- */
-
-
-
-$response_error = $client->GetWalletDetails(array(
-        "wlLogin" => LOGIN,
-        "wlPass" => PASSWORD,
-        "language" => LANGUAGE,
-        "version" => VERSION,
-        "walletIp" => getUserIP(),
-        "walletUa" => UA,
-        "wallet" => "NotExist"
-    ));
-//print the response
-echo "---------- Wallet NotExist: ----------";
-echo "<pre>".json_encode($response_error, JSON_PRETTY_PRINT)."</pre>";
-/*
+catch (SoapFault $e) 
 {
-    "GetWalletDetailsResult": {
-        "E": {
-            "Error": "",
-            "Code": "147",
-            "Msg": "Identifiant inexistant",
-            "Prio": "2"
-        }
-    }
+    //die(var_dump($e));
+    die("Something wrong with the webservice");
 }
-*/
-?>
