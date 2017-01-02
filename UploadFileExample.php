@@ -1,7 +1,7 @@
 <?php
 require_once "./includes.php";
 
-$client = new SoapClient(DIRECTKIT_WS."?wsdl", array("trace"=>true, "exception"=>0));
+$client = new SoapClient(DIRECTKIT_WS."?wsdl", array("trace"=>true, "exceptions"=>true));
 
 //Get the file content
 $buffer = file_get_contents('images/test.jpeg', true);
