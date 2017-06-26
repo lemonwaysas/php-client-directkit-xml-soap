@@ -1,21 +1,12 @@
 The LemonWay API (called Directkit) has two implementations: Directkit**Json2** and Directkit**Xml**. 
-There are different ways to call the service depends on the implementation you chose.
 
-The best way to access to directkit**Json2** is to use the [`curl_init`] function to send POST request to the Directkit**Json2** service. 
+The best way to integrate our API is to use the [`curl_init`] function to send POST request to the Directkit**Json2** service ([See the example here](https://github.com/lemonwaysas/php-client-directkit-json2))
 
-[See the example here](https://github.com/lemonwaysas/php-client-directkit-json2)
+It is the simplest and the most network-efficient way. However if you don't like the json format, you can also send SOAP (XML) requests to Directkit**Xml**.
 
-It is the simplest and the most network-efficient way. 
- 
-If you don't like the json format, you can also send SOAP (XML) requests to Directkit**Xml**, you can do it in 3 different ways:
+**[SoapClient]** is the casual method in PHP to consume not only the Directkit**Xml** but any third-party Web Services
 
- 1. **[SoapClient]**: the casual method in PHP to consume any Web Service. It is the simplest way to access to SOAP request.
- 2. **[SoapClient SDK]**: same with the first method, but all the structure of requests / responses are generated overhead with [`wsdl2phpgenerator`](http://wsdl2phpgenerator.github.io/wsdl2phpgenerator/)
- 3. **[LemonWay SDK]**: call the web service as a normal http request [`curl_init`]. The SDK will help you to parse the SOAP response.
-
-This example demonstrates the first method.
-
-It is tested with PHP 5.4.31 and PHP 7.
+These examples demonstrate how to use the [SoapClient], it is tested with PHP 5.4.31 and PHP 7.
 
 # Required extensions
 
