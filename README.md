@@ -35,6 +35,13 @@ echo "<pre>".json_encode($response, JSON_PRETTY_PRINT)."</pre>";
 ```
 See also: [LemonWay API documentation](http://documentation.lemonway.fr/) / method [`GetWalletTransHistory`](http://documentation.lemonway.fr/api-en/directkit/manage-wallets/getwallettranshistory-get-list-of-all-transactions-of-a-wallet)
 
+# How to run
+
+Open the terminal, run:
+```
+php GetWalletDetailsExample.php
+```
+
 # SoapClient WSDL cache
 
 (Please refer to the [SoapClient manual](http://php.net/manual/en/class.soapclient.php) for more information)
