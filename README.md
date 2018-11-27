@@ -42,6 +42,8 @@ Open the terminal, run:
 php GetWalletDetailsExample.php
 ```
 
+Tips: [the Quickest way to get PHP running on a Windows PC](https://github.com/lemonwaysas/php-client-directkit-xml-soap/wiki/Quickest-way-to-get-PHP-running-on-a-Windows-PC)
+
 # SoapClient WSDL cache
 
 (Please refer to the [SoapClient manual](http://php.net/manual/en/class.soapclient.php) for more information)
