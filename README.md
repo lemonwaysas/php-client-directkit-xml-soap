@@ -93,7 +93,10 @@ ini_set("soap.wsdl_cache_ttl", 10);
 [`curl_init`]: http://php.net/manual/en/function.curl-init.php
 
 # PHP Fatal error:  SOAP-ERROR: Parsing WSDL: Couldn't find <definitions> in...
-If you has this error, probably your server's IP address has not been whitelisted, please contact operations@lemonway.com
+    
+    SOAP-ERROR: Parsing WSDL: Couldn't load from : failed to load external entity
+    
+If you has this error, probably your server's IP address has not been whitelisted, please contact support@lemonway.com
 
 # Common scenario
 - Register a Payer Wallet (RegisterWallet)
