@@ -1,3 +1,5 @@
+⚠️WARNING: This client is deprecated⚠️ 
+
 The LemonWay API (called Directkit) has two implementations: Directkit**Json2** and Directkit**Xml**. 
 
 The best way to integrate our API is to use the [`curl_init`] function to send POST request to the Directkit**Json2** service ([See the example here](https://github.com/lemonwaysas/php-client-directkit-json2))
